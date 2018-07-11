@@ -1,0 +1,62 @@
+{
+    "name": "webmagic/ecommerce-light",
+    "description": "Ecommerce package for Laravel",
+    "require": {
+        "php" : "7.1.*",
+        "laravel/framework": "5.5.*",
+        "webmagic/core": "v0.5.1",
+        "webmagic/dashboard": "1.0.*",
+
+        "maatwebsite/excel": "^2.1",
+        "ivanlemeshev/laravel5-cyrillic-slug": "1.0.0",
+        "fzaninotto/faker": "~1.4",
+        "laracasts/presenter": "^0.2.1",
+        "rutorika/sortable": "^3.2",
+        "nicolaslopezj/searchable": "1.*",
+        "chumper/zipper": "0.6.x",
+        "kalnoy/nestedset": "^4.3"
+    },
+    "require-dev": {
+        "laravel/laravel": "5.5.*",
+        "phpunit/phpunit": "~6.0"
+    },
+    "repositories":[
+        {
+            "type":"vcs",
+            "url":"https://bitbucket.org/webmagic/core"
+        },
+        {
+            "type":"vcs",
+            "url":"https://bitbucket.org/webmagic/dashboard"
+        },
+        {
+            "type":"vcs",
+            "url":"https://bitbucket.org/webmagic/users"
+        }
+    ],    
+    "autoload":{
+        "psr-4":{
+            "Webmagic\\EcommerceLight\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+
+    "archive": {
+        "exclude": [
+            "/tests",
+            "test.bat",
+            "phpunit.xml"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webmagic\\EcommerceLight\\EcommerceDashboardServiceProvider"
+            ]
+        }
+    }
+}
